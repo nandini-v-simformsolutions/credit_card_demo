@@ -14,7 +14,7 @@ open class BaseTextField: UITextField {
     var floatingLabelHeight: CGFloat = 10 // Default height
     
     @IBInspectable
-    var _placeholder: String? // we cannot override 'placeholder'
+    var placeholderText: String? // we cannot override 'placeholder'
     
     @IBInspectable
     var floatingLabelColor: UIColor = UIColor.black {
@@ -25,7 +25,7 @@ open class BaseTextField: UITextField {
     }
     
     @IBInspectable
-    var activeBorderColor: UIColor = UIColor.black
+    var borderColor: UIColor = UIColor.black
     
     @IBInspectable
     var floatingLabelFont: UIFont = UIFont.systemFont(ofSize: 14) {
@@ -36,11 +36,10 @@ open class BaseTextField: UITextField {
         }
     }
     
-    
-    required  public init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self._placeholder = (self._placeholder != nil) ? self._placeholder : placeholder // Use our custom placeholder if none is set
-        placeholder = self._placeholder // make sure the placeholder is shown
+        self.placeholderText = (self.placeholderText != nil) ? self.placeholderText : placeholder
+        placeholder = self.placeholderText
         self.floatingLabel = UILabel(frame: CGRect.zero)
         self.addTarget(self, action: #selector(self.addFloatingLabel), for: .editingDidBegin)
         self.addTarget(self, action: #selector(self.removeFloatingLabel), for: .editingDidEnd)
@@ -50,17 +49,15 @@ open class BaseTextField: UITextField {
         if self.text == "" {
             self.floatingLabel.textColor = floatingLabelColor
             self.floatingLabel.font = floatingLabelFont
-            self.floatingLabel.text = self._placeholder
+            self.floatingLabel.text = self.placeholderText
             self.floatingLabel.layer.backgroundColor = UIColor.white.cgColor
             self.floatingLabel.translatesAutoresizingMaskIntoConstraints = false
             self.floatingLabel.clipsToBounds = true
             self.floatingLabel.frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.floatingLabelHeight)
-            self.layer.borderColor = self.activeBorderColor.cgColor
+            self.layer.borderColor = self.borderColor.cgColor
             self.addSubview(self.floatingLabel)
-            
             self.floatingLabel.bottomAnchor.constraint(equalTo:
-                                                        self.topAnchor, constant: -10).isActive = true // Place our label 10pts above the text field
-            // Remove the placeholder
+                                                        self.topAnchor, constant: -10).isActive = true
             self.placeholder = ""
         }
         self.setNeedsDisplay()
@@ -69,13 +66,12 @@ open class BaseTextField: UITextField {
     @objc func removeFloatingLabel() {
         if self.text == "" {
             UIView.animate(withDuration: 0.13) {
-                self.subviews.forEach{ $0.removeFromSuperview() }
+                self.floatingLabel.removeFromSuperview()
                 self.setNeedsDisplay()
             }
-            self.placeholder = self._placeholder
+            self.placeholder = self.placeholderText
         }
-        self.layer.borderColor = UIColor.black.cgColor
+        self.layer.borderColor = self.borderColor.cgColor
     }
-    
     
 }

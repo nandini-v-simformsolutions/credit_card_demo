@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import Combine
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var tfCardNumber: UITextField!
+    @IBOutlet weak var lblCardHolder: UILabel!
+    @IBOutlet weak var tfCardHolder: BaseTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,11 +22,20 @@ class ViewController: UIViewController {
     }
     
     func initialSetup(){
-        mainView.backgroundColor = .clear
         mainView.roundCorners(15)
         cardView.addViewShadow()
         tfCardNumber.layer.borderColor = UIColor.black.cgColor
+        lblCardHolder.text = dataSubcriber.send(tfCardHolder)
     }
+    
+    
+    
+    
+}
+
+let dataPublisher = PassthroughSubject<String, Never>()
+let dataSubcriber = dataPublisher.sink { value in
+    
 }
 
 extension UIView {
