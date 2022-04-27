@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ig4-1u-o0v">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="wci-pN-nFk">
+            <objects>
+                <viewController id="Ig4-1u-o0v" customClass="ViewController" customModule="CreditCardDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8YU-Hs-DD6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oEe-iq-x7C">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1VN-MO-e00">
+                                        <rect key="frame" x="10" y="10" width="394" height="245.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gss-79-v1c">
+                                        <rect key="frame" x="10" y="295.5" width="394" height="245.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6sv-za-Iot">
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="245.5"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="iXr-ln-dtM" customClass="BaseTextField" customModule="CreditCardDemo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="68.5"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelColor">
+                                                                <color key="value" systemColor="labelColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="activeBorderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Number"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GCd-Fs-q5P">
+                                                        <rect key="frame" x="0.0" y="88.5" width="394" height="68.5"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Expired Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="199-v0-tHS" customClass="BaseTextField" customModule="CreditCardDemo" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="192" height="68.5"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Expired Date"/>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelColor">
+                                                                        <color key="value" systemColor="labelColor"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="activeBorderColor">
+                                                                        <color key="value" systemColor="labelColor"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mmO-ec-wb8" customClass="BaseTextField" customModule="CreditCardDemo" customModuleProvider="target">
+                                                                <rect key="frame" x="202" y="0.0" width="192" height="68.5"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="CVV"/>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelColor">
+                                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="activeBorderColor">
+                                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card Holder" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BbW-SG-xS8" customClass="BaseTextField" customModule="CreditCardDemo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="177" width="394" height="68.5"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Card Holder"/>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="activeBorderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="6sv-za-Iot" firstAttribute="leading" secondItem="gss-79-v1c" secondAttribute="leading" id="1af-hC-q9K"/>
+                                            <constraint firstAttribute="bottom" secondItem="6sv-za-Iot" secondAttribute="bottom" id="gBT-53-hZg"/>
+                                            <constraint firstItem="6sv-za-Iot" firstAttribute="top" secondItem="gss-79-v1c" secondAttribute="top" id="ocx-Wr-tkT"/>
+                                            <constraint firstAttribute="trailing" secondItem="6sv-za-Iot" secondAttribute="trailing" id="qke-bY-Of8"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="gss-79-v1c" firstAttribute="top" secondItem="1VN-MO-e00" secondAttribute="bottom" constant="40" id="3Xu-ur-HGl"/>
+                                    <constraint firstItem="1VN-MO-e00" firstAttribute="leading" secondItem="oEe-iq-x7C" secondAttribute="leading" constant="10" id="5wn-pJ-lBe"/>
+                                    <constraint firstItem="gss-79-v1c" firstAttribute="trailing" secondItem="1VN-MO-e00" secondAttribute="trailing" id="Cat-cy-ii3"/>
+                                    <constraint firstItem="gss-79-v1c" firstAttribute="leading" secondItem="1VN-MO-e00" secondAttribute="leading" id="Iz3-jg-oAb"/>
+                                    <constraint firstItem="1VN-MO-e00" firstAttribute="height" secondItem="oEe-iq-x7C" secondAttribute="height" multiplier="0.3" id="bTO-KD-dV0"/>
+                                    <constraint firstAttribute="trailing" secondItem="1VN-MO-e00" secondAttribute="trailing" constant="10" id="cKV-ju-CGm"/>
+                                    <constraint firstItem="1VN-MO-e00" firstAttribute="top" secondItem="oEe-iq-x7C" secondAttribute="top" constant="10" id="qAy-EP-erE"/>
+                                    <constraint firstItem="gss-79-v1c" firstAttribute="height" secondItem="oEe-iq-x7C" secondAttribute="height" multiplier="0.3" id="x8u-pb-Wn1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xVy-C8-H3g"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oEe-iq-x7C" firstAttribute="leading" secondItem="xVy-C8-H3g" secondAttribute="leading" id="Bua-k3-nm9"/>
+                            <constraint firstItem="xVy-C8-H3g" firstAttribute="trailing" secondItem="oEe-iq-x7C" secondAttribute="trailing" id="h5Y-sG-cW0"/>
+                            <constraint firstItem="oEe-iq-x7C" firstAttribute="bottom" secondItem="xVy-C8-H3g" secondAttribute="bottom" id="jEX-D3-gpq"/>
+                            <constraint firstItem="oEe-iq-x7C" firstAttribute="top" secondItem="xVy-C8-H3g" secondAttribute="top" id="vYE-G9-9j4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardView" destination="1VN-MO-e00" id="NWQ-SO-jcJ"/>
+                        <outlet property="mainView" destination="oEe-iq-x7C" id="H0T-Cg-vvK"/>
+                        <outlet property="tfCardNumber" destination="iXr-ln-dtM" id="Haa-00-uOM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r1A-Zm-U49" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-343" y="86"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
