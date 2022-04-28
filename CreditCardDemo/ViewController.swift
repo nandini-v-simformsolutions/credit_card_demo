@@ -9,33 +9,41 @@ import UIKit
 import Combine
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var cardView: UIView!
-    @IBOutlet weak var tfCardNumber: UITextField!
     @IBOutlet weak var lblCardHolder: UILabel!
     @IBOutlet weak var tfCardHolder: BaseTextField!
+    @IBOutlet weak var tfCardNumber: BaseTextField!
+    @IBOutlet weak var tfCVV: BaseTextField!
+    @IBOutlet weak var tfExpiredDate: BaseTextField!
+    @IBOutlet weak var lblCardNumber: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSetup()
+        [tfCardNumber, tfCardHolder].forEach {
+            $0?.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        }
     }
     
     func initialSetup(){
         mainView.roundCorners(15)
         cardView.addViewShadow()
         tfCardNumber.layer.borderColor = UIColor.black.cgColor
-        lblCardHolder.text = dataSubcriber.send(tfCardHolder)
     }
     
-    
-    
-    
-}
-
-let dataPublisher = PassthroughSubject<String, Never>()
-let dataSubcriber = dataPublisher.sink { value in
-    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        guard let text = textField.text else { return }
+        switch textField {
+        case tfCardHolder:
+            self.lblCardHolder.text = text
+        case tfCardNumber:
+            self.lblCardNumber.text = text
+        default:
+            break
+        }
+    }
 }
 
 extension UIView {
@@ -44,7 +52,7 @@ extension UIView {
         self.clipsToBounds = true
         self.layer.masksToBounds = true
     }
-
+    
     public func addViewShadow() {
         DispatchQueue.main.asyncAfter(deadline: (.now() + 0.2)) {
             let shadowLayer = CAShapeLayer()
@@ -58,4 +66,18 @@ extension UIView {
             self.layer.insertSublayer(shadowLayer, at: 0)
         }
     }
+}
+
+extension ViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case tfCardNumber:
+            tfCardHolder.becomeFirstResponder()
+        default:
+            textField.resignFirstResponder()
+        }
+        return true
+    }
+    
 }

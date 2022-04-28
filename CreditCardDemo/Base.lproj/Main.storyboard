@@ -7,6 +7,12 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Oswald-VariableFont_wght.ttf">
+            <string>Oswald-Light</string>
+            <string>Oswald-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="wci-pN-nFk">
@@ -22,31 +28,40 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1VN-MO-e00">
                                         <rect key="frame" x="10" y="20" width="394" height="245.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Holder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfX-9S-CeT">
-                                                <rect key="frame" x="10" y="188" width="374" height="49"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfX-9S-CeT">
+                                                <rect key="frame" x="20" y="100" width="354" height="49"/>
+                                                <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Holder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agB-di-Dl3">
+                                                <rect key="frame" x="20" y="159" width="354" height="30"/>
+                                                <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="tfX-9S-CeT" secondAttribute="trailing" constant="10" id="4X5-jw-WzZ"/>
-                                            <constraint firstItem="tfX-9S-CeT" firstAttribute="height" secondItem="1VN-MO-e00" secondAttribute="height" multiplier="0.2" id="Hge-vC-zOh"/>
-                                            <constraint firstAttribute="bottom" secondItem="tfX-9S-CeT" secondAttribute="bottom" constant="8.5" id="VPX-ZU-Dlb"/>
-                                            <constraint firstItem="tfX-9S-CeT" firstAttribute="leading" secondItem="1VN-MO-e00" secondAttribute="leading" constant="10" id="fkx-tT-Ngg"/>
+                                            <constraint firstItem="tfX-9S-CeT" firstAttribute="height" secondItem="1VN-MO-e00" secondAttribute="height" multiplier="0.199593" id="8eL-6L-uZ8"/>
+                                            <constraint firstItem="tfX-9S-CeT" firstAttribute="top" secondItem="1VN-MO-e00" secondAttribute="top" constant="100" id="8gq-vu-sHh"/>
+                                            <constraint firstItem="agB-di-Dl3" firstAttribute="leading" secondItem="tfX-9S-CeT" secondAttribute="leading" id="Q4a-FA-KhC"/>
+                                            <constraint firstItem="tfX-9S-CeT" firstAttribute="leading" secondItem="1VN-MO-e00" secondAttribute="leading" constant="20" id="TbE-PU-0xU"/>
+                                            <constraint firstAttribute="trailing" secondItem="tfX-9S-CeT" secondAttribute="trailing" constant="20" id="TbS-4a-prv"/>
+                                            <constraint firstItem="agB-di-Dl3" firstAttribute="trailing" secondItem="tfX-9S-CeT" secondAttribute="trailing" id="ZB6-QD-ukE"/>
+                                            <constraint firstItem="agB-di-Dl3" firstAttribute="top" secondItem="tfX-9S-CeT" secondAttribute="bottom" constant="10" id="mF2-Qw-6nt"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gss-79-v1c">
-                                        <rect key="frame" x="10" y="295.5" width="394" height="245.5"/>
+                                        <rect key="frame" x="10" y="295.5" width="394" height="286"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="6sv-za-Iot">
-                                                <rect key="frame" x="0.0" y="0.0" width="394" height="245.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="286"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card Number" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="iXr-ln-dtM" customClass="BaseTextField" customModule="CreditCardDemo" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="61.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="75.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="floatingLabelColor">
@@ -61,14 +76,17 @@
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Card Number"/>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="Ig4-1u-o0v" id="O0k-DA-3b9"/>
+                                                        </connections>
                                                     </textField>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GCd-Fs-q5P">
-                                                        <rect key="frame" x="0.0" y="91.5" width="394" height="62"/>
+                                                        <rect key="frame" x="0.0" y="105.5" width="394" height="75.5"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Expired Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="199-v0-tHS" customClass="BaseTextField" customModule="CreditCardDemo" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="192" height="62"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="192" height="75.5"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="20"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Expired Date"/>
@@ -85,9 +103,9 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mmO-ec-wb8" customClass="BaseTextField" customModule="CreditCardDemo" customModuleProvider="target">
-                                                                <rect key="frame" x="202" y="0.0" width="192" height="62"/>
+                                                                <rect key="frame" x="202" y="0.0" width="192" height="75.5"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="20"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="CVV"/>
@@ -106,9 +124,9 @@
                                                         </subviews>
                                                     </stackView>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card Holder" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BbW-SG-xS8" customClass="BaseTextField" customModule="CreditCardDemo" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="183.5" width="394" height="62"/>
+                                                        <rect key="frame" x="0.0" y="211" width="394" height="75"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Card Holder"/>
@@ -123,6 +141,9 @@
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Card Holder"/>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="Ig4-1u-o0v" id="LXa-CA-oCu"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -145,7 +166,7 @@
                                     <constraint firstItem="1VN-MO-e00" firstAttribute="height" secondItem="oEe-iq-x7C" secondAttribute="height" multiplier="0.3" id="bTO-KD-dV0"/>
                                     <constraint firstAttribute="trailing" secondItem="1VN-MO-e00" secondAttribute="trailing" constant="10" id="cKV-ju-CGm"/>
                                     <constraint firstItem="1VN-MO-e00" firstAttribute="top" secondItem="oEe-iq-x7C" secondAttribute="top" constant="20" id="qAy-EP-erE"/>
-                                    <constraint firstItem="gss-79-v1c" firstAttribute="height" secondItem="oEe-iq-x7C" secondAttribute="height" multiplier="0.3" id="x8u-pb-Wn1"/>
+                                    <constraint firstItem="gss-79-v1c" firstAttribute="height" secondItem="oEe-iq-x7C" secondAttribute="height" multiplier="0.35" id="x8u-pb-Wn1"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -160,10 +181,13 @@
                     </view>
                     <connections>
                         <outlet property="cardView" destination="1VN-MO-e00" id="NWQ-SO-jcJ"/>
-                        <outlet property="lblCardHolder" destination="tfX-9S-CeT" id="ngP-aU-Oqu"/>
+                        <outlet property="lblCardHolder" destination="agB-di-Dl3" id="8Lq-qd-56Q"/>
+                        <outlet property="lblCardNumber" destination="tfX-9S-CeT" id="WXN-ns-niD"/>
                         <outlet property="mainView" destination="oEe-iq-x7C" id="H0T-Cg-vvK"/>
+                        <outlet property="tfCVV" destination="mmO-ec-wb8" id="DlB-W7-GhT"/>
                         <outlet property="tfCardHolder" destination="BbW-SG-xS8" id="xmX-Jy-SU4"/>
-                        <outlet property="tfCardNumber" destination="iXr-ln-dtM" id="Haa-00-uOM"/>
+                        <outlet property="tfCardNumber" destination="iXr-ln-dtM" id="1S4-Xa-Ql9"/>
+                        <outlet property="tfExpiredDate" destination="199-v0-tHS" id="hG5-Ww-iQJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r1A-Zm-U49" sceneMemberID="firstResponder"/>

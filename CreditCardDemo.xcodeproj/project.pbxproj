@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B05D110D281AC2DF00B8A0A7 /* Oswald-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B05D1104281AC2DE00B8A0A7 /* Oswald-Bold.ttf */; };
+		B05D110E281AC2DF00B8A0A7 /* Oswald-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B05D1105281AC2DE00B8A0A7 /* Oswald-SemiBold.ttf */; };
+		B05D110F281AC2DF00B8A0A7 /* Oswald-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B05D1106281AC2DE00B8A0A7 /* Oswald-Medium.ttf */; };
+		B05D1110281AC2DF00B8A0A7 /* Oswald-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B05D1107281AC2DE00B8A0A7 /* Oswald-Regular.ttf */; };
+		B05D1111281AC2DF00B8A0A7 /* Oswald-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B05D1108281AC2DE00B8A0A7 /* Oswald-ExtraLight.ttf */; };
+		B05D1112281AC2DF00B8A0A7 /* Oswald-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B05D1109281AC2DE00B8A0A7 /* Oswald-Light.ttf */; };
+		B05D1113281AC2DF00B8A0A7 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = B05D110A281AC2DE00B8A0A7 /* OFL.txt */; };
+		B05D1114281AC2DF00B8A0A7 /* Oswald-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B05D110B281AC2DE00B8A0A7 /* Oswald-VariableFont_wght.ttf */; };
+		B05D1115281AC2DF00B8A0A7 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = B05D110C281AC2DE00B8A0A7 /* README.txt */; };
 		B0D19F2B2805430B001E5CF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D19F2A2805430B001E5CF9 /* AppDelegate.swift */; };
 		B0D19F2D2805430B001E5CF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D19F2C2805430B001E5CF9 /* SceneDelegate.swift */; };
 		B0D19F2F2805430B001E5CF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D19F2E2805430B001E5CF9 /* ViewController.swift */; };
@@ -37,6 +46,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B05D1104281AC2DE00B8A0A7 /* Oswald-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Bold.ttf"; sourceTree = "<group>"; };
+		B05D1105281AC2DE00B8A0A7 /* Oswald-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-SemiBold.ttf"; sourceTree = "<group>"; };
+		B05D1106281AC2DE00B8A0A7 /* Oswald-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Medium.ttf"; sourceTree = "<group>"; };
+		B05D1107281AC2DE00B8A0A7 /* Oswald-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Regular.ttf"; sourceTree = "<group>"; };
+		B05D1108281AC2DE00B8A0A7 /* Oswald-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-ExtraLight.ttf"; sourceTree = "<group>"; };
+		B05D1109281AC2DE00B8A0A7 /* Oswald-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Light.ttf"; sourceTree = "<group>"; };
+		B05D110A281AC2DE00B8A0A7 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		B05D110B281AC2DE00B8A0A7 /* Oswald-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		B05D110C281AC2DE00B8A0A7 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		B0D19F272805430B001E5CF9 /* CreditCardDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreditCardDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0D19F2A2805430B001E5CF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0D19F2C2805430B001E5CF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +96,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B05D1102281AC2DE00B8A0A7 /* Oswald */ = {
+			isa = PBXGroup;
+			children = (
+				B05D1103281AC2DE00B8A0A7 /* static */,
+				B05D110A281AC2DE00B8A0A7 /* OFL.txt */,
+				B05D110B281AC2DE00B8A0A7 /* Oswald-VariableFont_wght.ttf */,
+				B05D110C281AC2DE00B8A0A7 /* README.txt */,
+			);
+			path = Oswald;
+			sourceTree = "<group>";
+		};
+		B05D1103281AC2DE00B8A0A7 /* static */ = {
+			isa = PBXGroup;
+			children = (
+				B05D1104281AC2DE00B8A0A7 /* Oswald-Bold.ttf */,
+				B05D1105281AC2DE00B8A0A7 /* Oswald-SemiBold.ttf */,
+				B05D1106281AC2DE00B8A0A7 /* Oswald-Medium.ttf */,
+				B05D1107281AC2DE00B8A0A7 /* Oswald-Regular.ttf */,
+				B05D1108281AC2DE00B8A0A7 /* Oswald-ExtraLight.ttf */,
+				B05D1109281AC2DE00B8A0A7 /* Oswald-Light.ttf */,
+			);
+			path = static;
+			sourceTree = "<group>";
+		};
 		B0D19F1E2805430B001E5CF9 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +143,7 @@
 		B0D19F292805430B001E5CF9 /* CreditCardDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B05D1102281AC2DE00B8A0A7 /* Oswald */,
 				B0D19F2A2805430B001E5CF9 /* AppDelegate.swift */,
 				B0D19F2C2805430B001E5CF9 /* SceneDelegate.swift */,
 				B0D19F2E2805430B001E5CF9 /* ViewController.swift */,
@@ -234,9 +277,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B05D1113281AC2DF00B8A0A7 /* OFL.txt in Resources */,
 				B0D19F372805430D001E5CF9 /* LaunchScreen.storyboard in Resources */,
+				B05D110E281AC2DF00B8A0A7 /* Oswald-SemiBold.ttf in Resources */,
 				B0D19F342805430D001E5CF9 /* Assets.xcassets in Resources */,
+				B05D1112281AC2DF00B8A0A7 /* Oswald-Light.ttf in Resources */,
+				B05D1110281AC2DF00B8A0A7 /* Oswald-Regular.ttf in Resources */,
+				B05D1111281AC2DF00B8A0A7 /* Oswald-ExtraLight.ttf in Resources */,
+				B05D110F281AC2DF00B8A0A7 /* Oswald-Medium.ttf in Resources */,
+				B05D1114281AC2DF00B8A0A7 /* Oswald-VariableFont_wght.ttf in Resources */,
 				B0D19F322805430B001E5CF9 /* Main.storyboard in Resources */,
+				B05D1115281AC2DF00B8A0A7 /* README.txt in Resources */,
+				B05D110D281AC2DF00B8A0A7 /* Oswald-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
