@@ -34,6 +34,7 @@ class ViewController: UIViewController {
         mainView.roundCorners(15)
         cardView.addViewShadow()
         tfCardNumber.layer.borderColor = UIColor.black.cgColor
+        tfCardNumber.maxLength = 16
     }
     
     @objc func textFieldDidChange(_ textField: UITextField) {
@@ -42,11 +43,29 @@ class ViewController: UIViewController {
         case tfCardHolder:
             self.lblCardHolder.text = text
         case tfCardNumber:
-            self.lblCardNumber.text = text
+            self.lblCardNumber.text = self.modifyCreditCardString(creditCardString: text)
         default:
             break
         }
     }
+    
+    func modifyCreditCardString(creditCardString : String) -> String {
+         let trimmedString = creditCardString.components(separatedBy: .whitespaces).joined()
+
+         let arrOfCharacters = Array(trimmedString)
+         var modifiedCreditCardString = ""
+
+         if(arrOfCharacters.count > 0) {
+             for i in 0...arrOfCharacters.count-1 {
+                 modifiedCreditCardString.append(arrOfCharacters[i])
+                 if((i+1) % 4 == 0 && i+1 != arrOfCharacters.count){
+                     modifiedCreditCardString.append(" - ")
+                 }
+             }
+         }
+         return modifiedCreditCardString
+     }
+
 }
 
 //MARK: - UITextFieldDelegate

@@ -12,6 +12,7 @@ open class BaseTextField: UITextField {
     
     var floatingLabel: UILabel = UILabel(frame: CGRect.zero) // Label
     var floatingLabelHeight: CGFloat = 10 // Default height
+    var maxLengths = [UITextField: Int]()
     
     @IBInspectable
     var placeholderText: String? // we cannot override 'placeholder'
@@ -24,6 +25,29 @@ open class BaseTextField: UITextField {
         }
     }
     
+    @IBInspectable var maxLength: Int {
+        get {
+            guard let length = maxLengths[self] else {
+                return Int.max
+            }
+            return length
+        }
+        set {
+            maxLengths[self] = newValue
+            addTarget(self, action: #selector(limitLength), for: .editingChanged)
+        }
+    }
+    
+    @objc func limitLength(textField: UITextField) {
+        guard let prospectiveText = textField.text, prospectiveText.count > maxLength else {
+            return
+        }
+        let selection = selectedTextRange
+        let maxCharIndex = prospectiveText.index(prospectiveText.startIndex, offsetBy: maxLength)
+        text = String(prospectiveText[..<maxCharIndex])
+        selectedTextRange = selection
+    }
+
     @IBInspectable
     var borderColor: UIColor = UIColor.black
     
