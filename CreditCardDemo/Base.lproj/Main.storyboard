@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ig4-1u-o0v">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ig4-1u-o0v">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -30,38 +30,56 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1VN-MO-e00" customClass="BaseView" customModule="CreditCardDemo" customModuleProvider="target">
                                         <rect key="frame" x="10" y="20" width="394" height="245.5"/>
                                         <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DfR-L7-hYL">
+                                                <rect key="frame" x="284" y="20" width="80" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="Qvb-WF-WHV"/>
+                                                    <constraint firstAttribute="height" constant="50" id="Slq-ly-zI1"/>
+                                                </constraints>
+                                            </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfX-9S-CeT">
-                                                <rect key="frame" x="20" y="100" width="354" height="49"/>
+                                                <rect key="frame" x="20" y="80" width="354" height="49"/>
                                                 <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Holder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agB-di-Dl3">
-                                                <rect key="frame" x="20" y="159" width="354" height="23.5"/>
+                                                <rect key="frame" x="20" y="137" width="354" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip" translatesAutoresizingMaskIntoConstraints="NO" id="LwS-he-hWh">
+                                                <rect key="frame" x="20" y="40" width="60" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="e1K-5j-obq"/>
+                                                    <constraint firstAttribute="width" constant="60" id="zPw-D5-kXR"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="tfX-9S-CeT" firstAttribute="height" secondItem="1VN-MO-e00" secondAttribute="height" multiplier="0.199593" id="8eL-6L-uZ8"/>
-                                            <constraint firstItem="tfX-9S-CeT" firstAttribute="top" secondItem="1VN-MO-e00" secondAttribute="top" constant="100" id="8gq-vu-sHh"/>
+                                            <constraint firstItem="tfX-9S-CeT" firstAttribute="top" secondItem="1VN-MO-e00" secondAttribute="top" constant="80" id="8gq-vu-sHh"/>
+                                            <constraint firstAttribute="trailing" secondItem="DfR-L7-hYL" secondAttribute="trailing" constant="30" id="GDK-0I-2H7"/>
+                                            <constraint firstItem="LwS-he-hWh" firstAttribute="top" secondItem="1VN-MO-e00" secondAttribute="top" constant="40" id="Q3z-Zn-ju9"/>
                                             <constraint firstItem="agB-di-Dl3" firstAttribute="leading" secondItem="tfX-9S-CeT" secondAttribute="leading" id="Q4a-FA-KhC"/>
                                             <constraint firstItem="tfX-9S-CeT" firstAttribute="leading" secondItem="1VN-MO-e00" secondAttribute="leading" constant="20" id="TbE-PU-0xU"/>
                                             <constraint firstAttribute="trailing" secondItem="tfX-9S-CeT" secondAttribute="trailing" constant="20" id="TbS-4a-prv"/>
                                             <constraint firstItem="agB-di-Dl3" firstAttribute="trailing" secondItem="tfX-9S-CeT" secondAttribute="trailing" id="ZB6-QD-ukE"/>
-                                            <constraint firstItem="agB-di-Dl3" firstAttribute="top" secondItem="tfX-9S-CeT" secondAttribute="bottom" constant="10" id="mF2-Qw-6nt"/>
+                                            <constraint firstItem="DfR-L7-hYL" firstAttribute="top" secondItem="1VN-MO-e00" secondAttribute="top" constant="20" id="kjw-6x-JUL"/>
+                                            <constraint firstItem="agB-di-Dl3" firstAttribute="top" secondItem="tfX-9S-CeT" secondAttribute="bottom" constant="8" symbolic="YES" id="mF2-Qw-6nt"/>
+                                            <constraint firstItem="LwS-he-hWh" firstAttribute="leading" secondItem="1VN-MO-e00" secondAttribute="leading" constant="20" id="uf7-zl-pIH"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gss-79-v1c">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gss-79-v1c" customClass="BaseView" customModule="CreditCardDemo" customModuleProvider="target">
                                         <rect key="frame" x="10" y="295.5" width="394" height="245.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="6sv-za-Iot">
-                                                <rect key="frame" x="0.0" y="0.0" width="394" height="245.5"/>
+                                                <rect key="frame" x="20" y="30" width="354" height="195.5"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card Number" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="iXr-ln-dtM" customClass="BaseTextField" customModule="CreditCardDemo" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="61.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="45"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
@@ -83,10 +101,10 @@
                                                         </connections>
                                                     </textField>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GCd-Fs-q5P">
-                                                        <rect key="frame" x="0.0" y="91.5" width="394" height="62"/>
+                                                        <rect key="frame" x="0.0" y="75" width="354" height="45"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Expired Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="199-v0-tHS" customClass="BaseTextField" customModule="CreditCardDemo" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="192" height="62"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="172" height="45"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="20"/>
                                                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
@@ -105,7 +123,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mmO-ec-wb8" customClass="BaseTextField" customModule="CreditCardDemo" customModuleProvider="target">
-                                                                <rect key="frame" x="202" y="0.0" width="192" height="62"/>
+                                                                <rect key="frame" x="182" y="0.0" width="172" height="45"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="20"/>
                                                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
@@ -126,7 +144,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card Holder" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BbW-SG-xS8" customClass="BaseTextField" customModule="CreditCardDemo" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="183.5" width="394" height="62"/>
+                                                        <rect key="frame" x="0.0" y="150" width="354" height="45.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Oswald-Light" family="Oswald" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -152,14 +170,14 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="6sv-za-Iot" firstAttribute="leading" secondItem="gss-79-v1c" secondAttribute="leading" id="1af-hC-q9K"/>
-                                            <constraint firstAttribute="bottom" secondItem="6sv-za-Iot" secondAttribute="bottom" id="gBT-53-hZg"/>
-                                            <constraint firstItem="6sv-za-Iot" firstAttribute="top" secondItem="gss-79-v1c" secondAttribute="top" id="ocx-Wr-tkT"/>
-                                            <constraint firstAttribute="trailing" secondItem="6sv-za-Iot" secondAttribute="trailing" id="qke-bY-Of8"/>
+                                            <constraint firstItem="6sv-za-Iot" firstAttribute="leading" secondItem="gss-79-v1c" secondAttribute="leading" constant="20" id="1af-hC-q9K"/>
+                                            <constraint firstAttribute="bottom" secondItem="6sv-za-Iot" secondAttribute="bottom" constant="20" id="gBT-53-hZg"/>
+                                            <constraint firstItem="6sv-za-Iot" firstAttribute="top" secondItem="gss-79-v1c" secondAttribute="top" constant="30" id="ocx-Wr-tkT"/>
+                                            <constraint firstAttribute="trailing" secondItem="6sv-za-Iot" secondAttribute="trailing" constant="20" id="qke-bY-Of8"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="gss-79-v1c" firstAttribute="top" secondItem="1VN-MO-e00" secondAttribute="bottom" constant="30" id="3Xu-ur-HGl"/>
                                     <constraint firstItem="1VN-MO-e00" firstAttribute="leading" secondItem="oEe-iq-x7C" secondAttribute="leading" constant="10" id="5wn-pJ-lBe"/>
@@ -173,7 +191,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xVy-C8-H3g"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="oEe-iq-x7C" firstAttribute="leading" secondItem="xVy-C8-H3g" secondAttribute="leading" id="Bua-k3-nm9"/>
                             <constraint firstItem="xVy-C8-H3g" firstAttribute="trailing" secondItem="oEe-iq-x7C" secondAttribute="trailing" id="h5Y-sG-cW0"/>
@@ -186,6 +204,7 @@
                         <outlet property="lblCardHolder" destination="agB-di-Dl3" id="8Lq-qd-56Q"/>
                         <outlet property="lblCardNumber" destination="tfX-9S-CeT" id="WXN-ns-niD"/>
                         <outlet property="mainView" destination="oEe-iq-x7C" id="JCd-8E-Y9F"/>
+                        <outlet property="textView" destination="gss-79-v1c" id="peH-S2-TGk"/>
                         <outlet property="tfCVV" destination="mmO-ec-wb8" id="DlB-W7-GhT"/>
                         <outlet property="tfCardHolder" destination="BbW-SG-xS8" id="xmX-Jy-SU4"/>
                         <outlet property="tfCardNumber" destination="iXr-ln-dtM" id="1S4-Xa-Ql9"/>
@@ -198,11 +217,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chip" width="36" height="28"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

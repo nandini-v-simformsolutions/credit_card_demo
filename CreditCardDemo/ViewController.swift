@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     //MARK: - Outlets
     @IBOutlet weak var mainView: BaseView!
     @IBOutlet weak var cardView: BaseView!
+    @IBOutlet weak var textView: BaseView!
     @IBOutlet weak var lblCardHolder: UILabel!
     @IBOutlet weak var tfCardHolder: BaseTextField!
     @IBOutlet weak var tfCardNumber: BaseTextField!
@@ -32,6 +33,8 @@ class ViewController: UIViewController {
     //MARK: - Setup
     func initialSetup(){
         mainView.roundCorners(15)
+        cardView.roundCorners(30)
+        textView.roundCorners(30)
         cardView.addViewShadow()
         tfCardNumber.layer.borderColor = UIColor.black.cgColor
         tfCardNumber.maxLength = 16
